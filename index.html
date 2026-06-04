@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -1059,7 +1059,270 @@
     .work-edit-note{position:relative;z-index:2;margin-top:18px;padding:15px;border-radius:18px;background:rgba(255,255,255,.045);border:1px solid rgba(255,239,132,.18);color:var(--muted);font-size:13px;line-height:1.65}.work-edit-note b{color:var(--gold)}
     @media(max-width:1100px){.work-client-grid{grid-template-columns:repeat(2,1fr)}.work-options-grid,.work-samples-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:780px){.work-shell{padding:18px;border-radius:24px}.work-client-grid,.work-options-grid,.work-samples-grid{grid-template-columns:1fr}.work-client-card{min-height:150px;grid-template-rows:76px auto}.work-logo-box{height:76px}.work-option-card{padding:17px}.work-sample-card{grid-template-rows:116px auto}}
+    /* =========================================================
+       Professional theme + performance pass
+       Added by Codex: cleaner structure, refined colors, low-lag motion
+    ========================================================= */
+    :root{
+      --bg:#0b0f14;
+      --bg2:#111821;
+      --panel:#151c24;
+      --panel2:#1b2530;
+      --gold:#d8b75f;
+      --gold2:#b89136;
+      --cyan:#40c2b8;
+      --green:#6ed6a3;
+      --text:#f7f3e8;
+      --muted:#b9c2c9;
+      --line:rgba(216,183,95,.24);
+      --line2:rgba(255,255,255,.10);
+      --shadow:0 18px 44px rgba(0,0,0,.30);
+      --radius:18px;
+      --max:1160px;
+    }
+    html{scroll-padding-top:92px}
+    body{
+      background:
+        linear-gradient(180deg, rgba(64,194,184,.09), transparent 420px),
+        radial-gradient(circle at 86% 10%, rgba(216,183,95,.13), transparent 330px),
+        linear-gradient(180deg,#0b0f14 0%,#121a22 48%,#0d1117 100%) !important;
+      color:var(--text) !important;
+    }
+    body::before,body::after{display:none !important}
+    .container{width:min(var(--max),calc(100% - 40px)) !important}
+    .section{padding:82px 0 !important}
+    .section-sm{padding:58px 0 !important}
 
+    .surface,.card,.proof-shell,.matched-shell,.clients-shell,.work-shell,.demo-banner,.footer-shell{
+      border-radius:var(--radius) !important;
+      background:linear-gradient(180deg,rgba(24,33,42,.96),rgba(14,19,25,.98)) !important;
+      border:1px solid var(--line2) !important;
+      box-shadow:var(--shadow) !important;
+    }
+    .card:hover,.matched-card:hover,.work-client-card:hover,.work-option-card:hover,.work-sample-card:hover,.pdf-card:hover{
+      transform:translateY(-3px) !important;
+      border-color:rgba(216,183,95,.36) !important;
+      box-shadow:0 20px 48px rgba(0,0,0,.34) !important;
+    }
+
+    .surface::before,.card::before,.section::before,.section-sm::before,
+    .intro-logo-showcase::before,.intro-logo-showcase::after,
+    .clients-shell::after,.work-shell::after,.footer-shell::after,
+    .proof-grid::before,.proof-grid::after,.page-sheen{display:none !important}
+    *,*::before,*::after{filter:none !important;text-shadow:none !important}
+
+    .topbar{
+      background:rgba(11,15,20,.86) !important;
+      border-bottom:1px solid rgba(255,255,255,.10) !important;
+      box-shadow:0 10px 32px rgba(0,0,0,.20) !important;
+    }
+    .nav{padding:10px 0 !important}
+    .brand-logo{width:56px !important;height:56px !important;border-radius:14px !important;background:#fff !important;padding:4px !important}
+    .brand-text strong{font-size:19px !important;letter-spacing:0 !important}
+    .brand-text span{color:var(--muted) !important;letter-spacing:.08em !important}
+    .nav-menu{gap:16px !important}
+    .nav-menu a{color:#c8d0d5 !important;font-size:13px !important}
+    .nav-menu a:hover{color:var(--text) !important}
+    .nav-menu a::after{background:linear-gradient(90deg,var(--cyan),var(--gold)) !important}
+
+    .eyebrow{
+      background:rgba(64,194,184,.10) !important;
+      border-color:rgba(64,194,184,.26) !important;
+      color:#9be7df !important;
+      border-radius:999px !important;
+      letter-spacing:.11em !important;
+    }
+    .section-title,.hero h1{
+      letter-spacing:-.035em !important;
+      color:var(--text) !important;
+    }
+    .grad{
+      background:linear-gradient(135deg,#fff3bd,var(--gold),#7ee0d8) !important;
+      -webkit-background-clip:text !important;
+      background-clip:text !important;
+      color:transparent !important;
+    }
+    .lead,.section-copy,.matched-note,.demo-banner p,.price-card p,.service-card p,.pdf-card p,.proof-note ul,.contact-card p,.intro-point span,.check-row span,.work-option-card p,.work-sample-body small,.contact-item,.footer p,.footer a{
+      color:var(--muted) !important;
+    }
+
+    .btn{border-radius:12px !important;min-height:48px !important;font-weight:900 !important;transition:transform .18s ease, background-color .18s ease, border-color .18s ease !important}
+    .btn::after{display:none !important}
+    .btn-primary{
+      background:linear-gradient(135deg,#f5d979,#cfa44b) !important;
+      color:#101419 !important;
+      box-shadow:0 12px 28px rgba(216,183,95,.22) !important;
+    }
+    .btn-dark{background:rgba(255,255,255,.06) !important;border-color:rgba(255,255,255,.13) !important;color:var(--text) !important}
+    .btn:hover{transform:translateY(-2px) !important}
+
+    .hero{min-height:auto !important;padding:128px 0 64px !important}
+    .hero-grid{gap:30px !important;align-items:center !important}
+    .hero h1{font-size:clamp(40px,5.7vw,76px) !important;line-height:.96 !important;max-width:760px !important}
+    .hero .lead{max-width:650px !important}
+    .trust-grid,.services-grid,.process-grid,.pricing-grid,.section-map,.matched-grid,.work-options-grid,.work-samples-grid{gap:14px !important}
+    .trust-box,.pdf-card,.service-card,.process-card,.price-card,.work-option-card,.work-sample-card,.contact-card,.why-list,.skill-panel{
+      border-radius:16px !important;
+      background:rgba(255,255,255,.045) !important;
+      border:1px solid rgba(255,255,255,.10) !important;
+      box-shadow:none !important;
+    }
+    .trust-box strong,.price,.gold,.price-row b,.pdf-card span,.service-icon,.process-num,.tick,.skill-badge,.work-option-card .num,.work-sample-body em{color:var(--gold) !important}
+    .service-icon,.process-num,.work-option-card .num,.tick,.pdf-card span{
+      background:rgba(216,183,95,.12) !important;
+      border:1px solid rgba(216,183,95,.24) !important;
+      box-shadow:none !important;
+    }
+    .process-num,.work-option-card .num{color:#f4df9d !important}
+
+    .hero-media,.intro-video{padding:14px !important;border-radius:18px !important}
+    .hero-media{padding-bottom:14px !important}
+    .video-wrap,.video-wrap video,.intro-video video,.logo-card,.frame-box,.intro-logo-showcase,.work-logo-box,.work-sample-preview,.logo-marquee{border-radius:14px !important}
+    .logo-card{background:rgba(255,255,255,.045) !important;border:1px solid rgba(255,255,255,.10) !important}
+    .artist-girl,.artist-girl-image{display:none !important}
+    .intro-logo-panel{min-height:360px !important}
+    .intro-logo-showcase{background:linear-gradient(145deg,rgba(13,17,23,.96),rgba(27,37,48,.94)) !important;box-shadow:none !important}
+    .intro-logo-showcase img{animation:none !important;box-shadow:none !important}
+    .logo-orbit{display:none !important}
+    .intro-logo-caption{background:rgba(11,15,20,.82) !important;border-color:rgba(255,255,255,.12) !important;border-radius:12px !important}
+
+    #proof .proof-grid,#proof .frame-box.magazine-frame{
+      background:rgba(255,255,255,.04) !important;
+      border:1px solid rgba(255,255,255,.10) !important;
+      transform:none !important;
+      perspective:none !important;
+      box-shadow:none !important;
+    }
+    #proof .frame-box.magazine-frame::after{display:none !important;animation:none !important}
+    #proof .frame-box.magazine-frame.page-flip img,.frame-box img.changing{animation:none !important;opacity:1 !important;transform:none !important}
+    .frame-box{min-height:470px !important;background:#f7f7f2 !important}
+    .frame-tag{background:rgba(11,15,20,.76) !important;color:#f1d27b !important;border-color:rgba(255,255,255,.14) !important}
+    .frame-btn,.matched-btn{background:rgba(255,255,255,.07) !important;border-color:rgba(255,255,255,.13) !important;color:var(--text) !important}
+
+    .logo-track,.client-logo-card,.work-client-card,.work-option-card,.work-sample-card,.skill-panel .big::before,.whatsapp-float{
+      animation:none !important;
+    }
+    .logo-track{transform:none !important;flex-wrap:wrap !important;width:100% !important;justify-content:center !important}
+    .logo-marquee{-webkit-mask-image:none !important;mask-image:none !important;overflow:visible !important}
+    .client-logo-card,.work-client-card,.work-option-card,.work-sample-card,.matched-card{
+      background:rgba(255,255,255,.045) !important;
+      border:1px solid rgba(255,255,255,.10) !important;
+      box-shadow:none !important;
+    }
+
+    .price-table{border-radius:16px !important;background:rgba(255,255,255,.045) !important;border-color:rgba(255,255,255,.10) !important}
+    .price-row:first-child{background:rgba(64,194,184,.10) !important}
+    input,textarea,select{border-radius:12px !important;background:rgba(255,255,255,.06) !important;border-color:rgba(255,255,255,.13) !important;color:var(--text) !important}
+    input:focus,textarea:focus,select:focus{border-color:var(--cyan) !important;box-shadow:0 0 0 4px rgba(64,194,184,.12) !important}
+    .whatsapp-float{border-radius:14px !important;background:#1fae62 !important;box-shadow:0 14px 30px rgba(0,0,0,.28) !important}
+    .footer-logo-row img,.footer-qr-card img,.footer-save-contact img{border-radius:12px !important;background:#fff !important}
+
+    @media(max-width:1100px){
+      .hero-grid,.intro-showcase,.proof-grid,.why-grid,.contact-grid,.footer-grid,.demo-banner{grid-template-columns:1fr !important}
+      .services-grid,.pricing-grid,.process-grid,.section-map,.work-options-grid,.work-samples-grid{grid-template-columns:repeat(2,1fr) !important}
+      .work-client-grid{grid-template-columns:repeat(2,1fr) !important}
+      .frame-box{min-height:390px !important}
+    }
+    @media(max-width:780px){
+      .container{width:calc(100% - 22px) !important}
+      .section{padding:48px 0 !important}.section-sm{padding:38px 0 !important}
+      .hero{padding:106px 0 42px !important}
+      .hero h1{font-size:clamp(33px,10vw,46px) !important;line-height:1.02 !important}
+      .section-title{font-size:clamp(28px,8.5vw,40px) !important;line-height:1.05 !important}
+      .nav-menu.open{display:grid !important;grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:10px !important}
+      .nav-menu a{padding:9px 10px !important;background:rgba(255,255,255,.05) !important;border-radius:10px !important}
+      .trust-grid,.services-grid,.pricing-grid,.process-grid,.form-grid,.section-map,.matched-grid,.work-client-grid,.work-options-grid,.work-samples-grid{grid-template-columns:1fr !important}
+      .frame-box{min-height:280px !important}
+      .intro-logo-panel{min-height:260px !important}
+      .demo-actions .btn,.hero-actions .btn{width:100% !important}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+    }
+    /* =========================================================
+       White + gold premium color trial
+       Clean ivory base, charcoal text, champagne gold accents
+    ========================================================= */
+    :root{
+      --bg:#fffaf0;--bg2:#f6efe1;--panel:#ffffff;--panel2:#fff8e8;
+      --gold:#c99a2e;--gold2:#8f681a;--cyan:#2f8f86;--green:#1f9a5b;
+      --text:#1d1a14;--muted:#655d50;
+      --line:rgba(201,154,46,.28);--line2:rgba(29,26,20,.10);
+      --shadow:0 16px 42px rgba(80,60,18,.12);
+    }
+    body{
+      color:#1d1a14 !important;
+      background:
+        radial-gradient(circle at 80% 6%,rgba(201,154,46,.20),transparent 330px),
+        radial-gradient(circle at 8% 20%,rgba(255,235,170,.42),transparent 330px),
+        linear-gradient(180deg,#fffaf0 0%,#f7efdf 48%,#fffdf8 100%) !important;
+    }
+    .topbar{
+      background:rgba(255,250,240,.92) !important;
+      border-bottom:1px solid rgba(201,154,46,.24) !important;
+      box-shadow:0 10px 30px rgba(80,60,18,.09) !important;
+    }
+    .surface,.card,.proof-shell,.matched-shell,.clients-shell,.work-shell,.demo-banner,.footer-shell{
+      background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,248,232,.96)) !important;
+      border-color:rgba(201,154,46,.22) !important;
+      box-shadow:0 16px 42px rgba(80,60,18,.12) !important;
+      color:#1d1a14 !important;
+    }
+    .trust-box,.pdf-card,.service-card,.process-card,.price-card,.work-option-card,.work-sample-card,.contact-card,.why-list,.skill-panel,.client-logo-card,.work-client-card,.matched-card{
+      background:linear-gradient(180deg,#ffffff,#fff8e8) !important;
+      border:1px solid rgba(201,154,46,.22) !important;
+      color:#1d1a14 !important;
+      box-shadow:0 10px 28px rgba(80,60,18,.08) !important;
+    }
+    .hero-media,.intro-video,.logo-card,.intro-logo-showcase,.price-table,.logo-marquee,.frame-box.magazine-frame,#proof .proof-grid{
+      background:linear-gradient(180deg,#ffffff,#fff7e4) !important;
+      border-color:rgba(201,154,46,.24) !important;
+      color:#1d1a14 !important;
+    }
+    .brand-logo{background:#fff !important;border-color:rgba(201,154,46,.40) !important;box-shadow:0 8px 24px rgba(128,92,18,.14) !important}
+    .brand-text strong,.section-title,.hero h1,h2,h3,h4,.footer h3,.logo-card h3,.contact-card h3{color:#1d1a14 !important}
+    .lead,.section-copy,.matched-note,.demo-banner p,.price-card p,.service-card p,.pdf-card p,.proof-note ul,.contact-card p,.intro-point span,.check-row span,.work-option-card p,.work-sample-body small,.contact-item,.footer p,.footer a,.nav-menu a,.brand-text span{color:#655d50 !important}
+    .nav-menu a:hover{color:#1d1a14 !important}
+    .eyebrow{
+      background:rgba(201,154,46,.11) !important;
+      border-color:rgba(201,154,46,.30) !important;
+      color:#8f681a !important;
+    }
+    .grad{
+      background:linear-gradient(135deg,#3a2b0c 0%,#c99a2e 42%,#ffe274 62%,#8f681a 100%) !important;
+      -webkit-background-clip:text !important;background-clip:text !important;color:transparent !important;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,#ffe58a 0%,#c99a2e 56%,#8f681a 100%) !important;
+      border-color:rgba(143,104,26,.28) !important;
+      color:#1d1a14 !important;
+      box-shadow:0 13px 28px rgba(201,154,46,.26) !important;
+    }
+    .btn-dark{
+      background:#ffffff !important;
+      border-color:rgba(201,154,46,.30) !important;
+      color:#2a2418 !important;
+    }
+    .btn-dark:hover{background:#fff4d8 !important;border-color:rgba(201,154,46,.48) !important}
+    .trust-box strong,.price,.gold,.price-row b,.pdf-card span,.service-icon,.process-num,.tick,.skill-badge,.work-option-card .num,.work-sample-body em,.matched-card-body strong,.client-logo-card b,.work-client-card b{color:#a7791e !important}
+    .service-icon,.process-num,.work-option-card .num,.tick,.pdf-card span{
+      background:rgba(201,154,46,.12) !important;
+      border-color:rgba(201,154,46,.30) !important;
+      color:#8f681a !important;
+    }
+    .price-row{color:#655d50 !important;border-bottom-color:rgba(29,26,20,.08) !important}
+    .price-row:first-child{background:rgba(201,154,46,.12) !important;color:#1d1a14 !important}
+    input,textarea,select{
+      background:#fffdf8 !important;
+      border-color:rgba(201,154,46,.28) !important;
+      color:#1d1a14 !important;
+    }
+    input::placeholder,textarea::placeholder{color:rgba(29,26,20,.48) !important}
+    input:focus,textarea:focus,select:focus{border-color:#c99a2e !important;box-shadow:0 0 0 4px rgba(201,154,46,.14) !important}
+    .frame-tag,.intro-logo-caption{background:rgba(255,255,255,.88) !important;border-color:rgba(201,154,46,.30) !important;color:#8f681a !important}
+    .whatsapp-float{background:linear-gradient(135deg,#20b866,#168d4f) !important;color:#fff !important}
+    .footer-bottom{border-top-color:rgba(201,154,46,.22) !important;color:#655d50 !important}
+    .footer-qr-card,.footer-save-contact,.contact-item,.intro-point,.check-row{background:rgba(255,255,255,.70) !important;border-color:rgba(201,154,46,.18) !important;color:#1d1a14 !important}
   </style>
 </head>
 <body>
@@ -1342,5 +1605,304 @@
 
     document.getElementById('leadForm')?.addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const text=`Hello Pixaro,%0A%0AI want product image editing service.%0AName: ${encodeURIComponent(d.get('name')||'')}%0ABusiness: ${encodeURIComponent(d.get('business')||'')}%0AMobile: ${encodeURIComponent(d.get('mobile')||'')}%0AQuantity: ${encodeURIComponent(d.get('qty')||'')}%0AService: ${encodeURIComponent(d.get('service')||'')}%0AMessage: ${encodeURIComponent(d.get('message')||'')}`;window.open(`https://wa.me/919033187554?text=${text}`,'_blank')});
   </script>
+
+<style id="pixaro-white-gold-dark-section-fix">
+/* White-gold section readability fix: pricing table + proof gallery */
+body #pricing .price-table,
+body #pricing .price-row,
+body #proof .proof-shell,
+body #proof .proof-grid,
+body #proof .proof-note,
+body #proof .frame-header,
+body #proof .frame-box.magazine-frame{
+  color:#201b12 !important;
+}
+body #pricing .price-table{
+  background:#fffdf7 !important;
+  border:1px solid rgba(201,154,46,.28) !important;
+  box-shadow:0 14px 34px rgba(114,82,20,.10) !important;
+  overflow:hidden !important;
+}
+body #pricing .price-row{
+  background:#fffaf0 !important;
+  border-bottom:1px solid rgba(201,154,46,.20) !important;
+  color:#4f4637 !important;
+}
+body #pricing .price-row:nth-child(even){background:#fff6e5 !important;}
+body #pricing .price-row:first-child{
+  background:linear-gradient(135deg,#fff1bd,#f7dd8a) !important;
+  color:#201b12 !important;
+  font-weight:950 !important;
+}
+body #pricing .price-row b{color:#9b6f13 !important;}
+
+body #proof .proof-shell{
+  background:linear-gradient(180deg,#fffdf7 0%,#fff5df 100%) !important;
+  border:1px solid rgba(201,154,46,.28) !important;
+  box-shadow:0 22px 52px rgba(114,82,20,.13) !important;
+}
+body #proof .frame-header .section-title,
+body #proof .frame-header h2{
+  color:#201b12 !important;
+  opacity:1 !important;
+}
+body #proof .frame-header .section-copy,
+body #proof .proof-note,
+body #proof .proof-note li,
+body #proof .proof-note ul{
+  color:#5f5546 !important;
+  opacity:1 !important;
+}
+body #proof .proof-grid{
+  background:#ffffff !important;
+  border:1px solid rgba(201,154,46,.24) !important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.70),0 12px 32px rgba(114,82,20,.08) !important;
+}
+body #proof .frame-box.magazine-frame{
+  background:#fff !important;
+  border:1px solid rgba(201,154,46,.26) !important;
+  box-shadow:0 12px 28px rgba(114,82,20,.10) !important;
+}
+body #proof .proof-note{
+  background:#fff9eb !important;
+  border:1px solid rgba(201,154,46,.24) !important;
+  box-shadow:none !important;
+}
+body #proof .eyebrow{
+  background:rgba(201,154,46,.12) !important;
+  border-color:rgba(201,154,46,.30) !important;
+  color:#8f681a !important;
+}
+body #proof .btn-dark{
+  background:#ffffff !important;
+  color:#231d12 !important;
+  border-color:rgba(201,154,46,.34) !important;
+}
+body #proof .btn-primary{
+  color:#1b160c !important;
+}
+body #proof .frame-tag{
+  background:rgba(255,255,255,.90) !important;
+  border-color:rgba(201,154,46,.35) !important;
+  color:#8f681a !important;
+}
+body #proof .proof-bg-elements{display:none !important;}
+</style>
+
+<style id="pixaro-final-readable-text-fix">
+/* Final readable text pass: keeps white-gold theme, fixes hidden text on dark/colored areas */
+body{
+  color:#1d1a14 !important;
+}
+body .surface,
+body .card,
+body .trust-box,
+body .pdf-card,
+body .intro-point,
+body .check-row,
+body .price-card,
+body .contact-card,
+body .contact-item,
+body .demo-banner,
+body .matched-shell,
+body .matched-card,
+body .clients-shell,
+body .client-logo-card,
+body .work-shell,
+body .work-client-card,
+body .work-option-card,
+body .work-sample-card,
+body .footer-shell,
+body .footer-qr-card,
+body .footer-save-contact,
+body .logo-card,
+body .intro-logo-caption{
+  color:#211b10 !important;
+}
+body .surface h1, body .surface h2, body .surface h3, body .surface h4,
+body .card h1, body .card h2, body .card h3, body .card h4,
+body .trust-box strong,
+body .pdf-card h3,
+body .intro-point b,
+body .check-row b,
+body .price-card h3,
+body .contact-card h3,
+body .demo-banner h2,
+body .matched-shell h2,
+body .clients-shell h2,
+body .work-shell h2,
+body .work-shell h3,
+body .work-client-card b,
+body .work-option-card h4,
+body .work-sample-body b,
+body .footer-shell h3,
+body .footer-logo-row span,
+body .contact-item b,
+body .footer-save-contact b{
+  color:#211b10 !important;
+  opacity:1 !important;
+}
+body .surface p, body .surface li, body .surface span,
+body .card p, body .card li, body .card small,
+body .trust-box span,
+body .pdf-card p,
+body .intro-point span,
+body .check-row span,
+body .price-card p,
+body .contact-card p,
+body .contact-item,
+body .demo-banner p,
+body .matched-note,
+body .matched-card-body span,
+body .clients-shell .section-copy,
+body .work-shell .section-copy,
+body .work-service-title span,
+body .work-option-card p,
+body .work-sample-body small,
+body .work-samples-head p,
+body .footer-shell p,
+body .footer-shell a,
+body .footer-bottom,
+body .footer-qr-card span{
+  color:#5f5546 !important;
+  opacity:1 !important;
+}
+body .gold,
+body .price,
+body .price-row b,
+body .matched-card-body strong,
+body .work-sample-body em,
+body .client-logo-card b,
+body .pdf-card span,
+body .service-icon,
+body .tick,
+body .skill-badge,
+body .process-num,
+body .work-option-card .num{
+  color:#8f681a !important;
+  opacity:1 !important;
+}
+body .btn-primary,
+body .btn-primary *,
+body button.btn-primary{
+  color:#1b160c !important;
+}
+body .btn-dark,
+body .btn-dark *,
+body .visiting-card-btn,
+body .visiting-card-btn *,
+body .frame-btn,
+body .matched-btn,
+body .menu-toggle{
+  color:#231d12 !important;
+  opacity:1 !important;
+}
+body .whatsapp-float,
+body .whatsapp-float *,
+body .whatsapp-pdf-card,
+body .whatsapp-pdf-card h3,
+body .whatsapp-pdf-card p{
+  color:#ffffff !important;
+  opacity:1 !important;
+}
+body .visiting-card-btn{
+  background:linear-gradient(135deg,#ffe58a,#c99a2e) !important;
+  border-color:rgba(143,104,26,.32) !important;
+  box-shadow:0 10px 22px rgba(201,154,46,.20) !important;
+}
+body .whatsapp-pdf-card{
+  background:linear-gradient(145deg,#1f8f49,#15723a) !important;
+  border-color:rgba(24,120,60,.36) !important;
+  box-shadow:0 14px 30px rgba(24,120,60,.18) !important;
+}
+body .whatsapp-pdf-card span{
+  color:#08210f !important;
+}
+body input,
+body textarea,
+body select,
+body option{
+  color:#1d1a14 !important;
+  background:#fffdf8 !important;
+}
+body input::placeholder,
+body textarea::placeholder{
+  color:rgba(29,26,20,.58) !important;
+  opacity:1 !important;
+}
+body .frame-tag,
+body .matched-count,
+body .matched-empty,
+body .work-edit-note,
+body .client-logo-placeholder,
+body .work-logo-box span,
+body .work-sample-preview span{
+  color:#8f681a !important;
+  opacity:1 !important;
+}
+body .frame-box,
+body .frame-box *,
+body .work-logo-box,
+body .work-sample-preview,
+body .client-logo-placeholder{
+  opacity:1 !important;
+}
+/* If any old dark section remains, make all readable text light inside it. */
+body .whatsapp-pdf-card b,
+body .whatsapp-pdf-card strong,
+body .whatsapp-pdf-card small{
+  color:#ffffff !important;
+}
+</style>
+
+<style id="pixaro-proof-dark-text-visibility-fix">
+/* Proof section: keep the dark background, make hidden header text visible */
+body #proof .proof-shell,
+body #proof .proof-shell.is-flipbook{
+  background:linear-gradient(145deg,rgba(18,18,9,.98),rgba(34,31,12,.94)) !important;
+  color:#fff8dc !important;
+}
+body #proof .frame-header,
+body #proof .frame-header div,
+body #proof .frame-header h2,
+body #proof .frame-header .section-title{
+  color:#fff8dc !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+body #proof .frame-header .section-copy,
+body #proof .frame-header p{
+  color:#f3e7bf !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+body #proof .frame-header .eyebrow{
+  background:rgba(201,154,46,.13) !important;
+  border-color:rgba(255,226,132,.34) !important;
+  color:#e8bd4b !important;
+}
+body #proof .frame-header .btn-dark{
+  background:#ffffff !important;
+  color:#241b0c !important;
+  border-color:rgba(255,255,255,.80) !important;
+}
+body #proof .frame-header .btn-primary{
+  color:#1b160c !important;
+}
+body #proof .proof-grid{
+  background:#ffffff !important;
+}
+body #proof .proof-note,
+body #proof .proof-note h3,
+body #proof .proof-note li{
+  color:#211b10 !important;
+  opacity:1 !important;
+}
+</style>
 </body>
 </html>
+
+
+
+
+
